@@ -125,6 +125,9 @@ const Header = () => {
                   <Link to="/melnudi" className="mks-drop-item" onClick={closeMenu}>
                     Melnudi
                   </Link>
+                  <Link to="/kannada-contact-details" className="mks-drop-item" onClick={closeMenu}>
+                    Kannada Contact Details
+                  </Link>
                 </div>
               </li>
 
@@ -160,8 +163,6 @@ const Header = () => {
               {/* SPONSORS */}
               <li><Link to="/sponsors" onClick={closeMenu}>Sponsors</Link></li>
 
-              {/* KANNADA CONTACT DETAILS */}
-              <li><Link to="/kannada-contact-details" onClick={closeMenu}>Kannada Contact Details</Link></li>
 
               {/* CONTACT */}
               <li className="mks-contact-li">
