@@ -3133,10 +3133,109 @@ body {
 
 /* ----------- GRID LAYOUT ----------- */
 
-.committee-grid {
+.committee-grid, .committee-grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+}
+
+.committee-grid-5, .committee-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.committee-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.committee-grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.committee-section-header {
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+.committee-section-header h3 {
+  font-size: 24px;
+  color: #5b1c1c;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.committee-bottom-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.committee-bottom-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* More space between Core and VSL sections */
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.committee-group-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.committee-group-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.committee-bottom-row .committee-card {
+  width: 200px;
+  max-width: 100%;
+}
+
+/* ----------- RESPONSIVE GRIDS ----------- */
+
+@media (max-width: 1024px) {
+  .committee-grid-5, .committee-bottom-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* Handle centering for row of 3 in the bottom row */
+  .committee-bottom-row {
+    justify-items: center;
+  }
+  .committee-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .committee-grid-5, .committee-bottom-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .committee-grid-4, .committee-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .committee-grid-5, .committee-bottom-row, .committee-grid-4, .committee-grid-2, .committee-grid-1 {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .committee-section-header h3 {
+    font-size: 20px;
+  }
 }
 
 /* ----------- CARD STYLING ----------- */
