@@ -150,7 +150,7 @@ const AboutKannadaBhavana = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="akb-gallery-section" style={{ marginTop: '4rem' }}>
+        {/* <div className="akb-gallery-section" style={{ marginTop: '4rem' }}>
           <h2 className="akb-section-title">Kannada Bhavana Inauguration</h2>
           <div className="akb-section-line"></div>
           
@@ -168,7 +168,7 @@ const AboutKannadaBhavana = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
       </section>
 
