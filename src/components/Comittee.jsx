@@ -198,30 +198,30 @@ const Comittee = () => {
         },
     ];
 
-    const pastCommittee = [
-        { id: 101, name: "Arunkumar V", photo: "/Arunkumar v.png" },
-        { id: 102, name: "Bhavya Vinay", photo: "/Bhavya vinay - Treasurer.png" },
-        { id: 103, name: "Ganesh Paradi", photo: "/Ganesh paradi.png" },
-        { id: 104, name: "Gautham H N", photo: "/Gautham H N.png" },
-        { id: 105, name: "Hemanth Kumar", photo: "/Hemanth kumar.png" },
-        { id: 106, name: "Hemanth", photo: "/Hemanth.png" },
-        { id: 107, name: "K B Math", photo: "/K.B.Math.png" },
-        { id: 108, name: "Manjula Krishanan", photo: "/Manjula Krishanan.png" },
-        { id: 109, name: "Mary Bhagyam", photo: "/Mary bhagyam.png" },
-        { id: 110, name: "Narendra", photo: "/Narendra.png" },
-        { id: 111, name: "Pramanth Joshi", photo: "/Pramanth joshi.png" },
-        { id: 112, name: "Sanath Billandlahalli", photo: "/Sanath Billandlahalli.png" },
-        { id: 113, name: "Shwetha Gowda", photo: "/Shwetha Gowda.png" },
-        { id: 114, name: "Srinivas Sharma", photo: "/Srinivas Sharma - President.png" },
-        { id: 115, name: "Srinivasa Chinnareddy", photo: "/Srinivasa chinnareddy - secretary.png" },
-        { id: 116, name: "Sudeysh Kumar", photo: "/Sudeysh kumar.png" },
-        { id: 117, name: "Sunyana Gadgoli", photo: "/Sunyana Gadgoli - vice president.png" },
-        { id: 118, name: "", photo: "/Unknown.png" },
-        { id: 119, name: "Vanishree Kulkarni", photo: "/Vanishree kulkarni.png" },
-        { id: 120, name: "Vikas Sudheendra", photo: "/Vikas sudheendra.png" },
-        { id: 121, name: "Avinash Adhyapak", photo: "/avinash adhyapak.png" },
-        { id: 122, name: "Dileep Ramadas", photo: "/dileep ramadas.png" }
-    ];
+    // const pastCommittee = [
+    //     { id: 101, name: "Arunkumar V", photo: "/Arunkumar v.png" },
+    //     { id: 102, name: "Bhavya Vinay", photo: "/Bhavya vinay - Treasurer.png" },
+    //     { id: 103, name: "Ganesh Paradi", photo: "/Ganesh paradi.png" },
+    //     { id: 104, name: "Gautham H N", photo: "/Gautham H N.png" },
+    //     { id: 105, name: "Hemanth Kumar", photo: "/Hemanth kumar.png" },
+    //     { id: 106, name: "Hemanth", photo: "/Hemanth.png" },
+    //     { id: 107, name: "K B Math", photo: "/K.B.Math.png" },
+    //     { id: 108, name: "Manjula Krishanan", photo: "/Manjula Krishanan.png" },
+    //     { id: 109, name: "Mary Bhagyam", photo: "/Mary bhagyam.png" },
+    //     { id: 110, name: "Narendra", photo: "/Narendra.png" },
+    //     { id: 111, name: "Pramanth Joshi", photo: "/Pramanth joshi.png" },
+    //     { id: 112, name: "Sanath Billandlahalli", photo: "/Sanath Billandlahalli.png" },
+    //     { id: 113, name: "Shwetha Gowda", photo: "/Shwetha Gowda.png" },
+    //     { id: 114, name: "Srinivas Sharma", photo: "/Srinivas Sharma - President.png" },
+    //     { id: 115, name: "Srinivasa Chinnareddy", photo: "/Srinivasa chinnareddy - secretary.png" },
+    //     { id: 116, name: "Sudeysh Kumar", photo: "/Sudeysh kumar.png" },
+    //     { id: 117, name: "Sunyana Gadgoli", photo: "/Sunyana Gadgoli - vice president.png" },
+    //     { id: 118, name: "", photo: "/Unknown.png" },
+    //     { id: 119, name: "Vanishree Kulkarni", photo: "/Vanishree kulkarni.png" },
+    //     { id: 120, name: "Vikas Sudheendra", photo: "/Vikas sudheendra.png" },
+    //     { id: 121, name: "Avinash Adhyapak", photo: "/avinash adhyapak.png" },
+    //     { id: 122, name: "Dileep Ramadas", photo: "/dileep ramadas.png" }
+    // ];
 
     return (
         <>
@@ -258,12 +258,126 @@ const Comittee = () => {
                 </div>
             </section>
 
+             {/* ================= PRESENT COMMITTEE 2025-2027 ================= */}
+            <section className="committee-list-section" style={{ paddingTop: '0' }}>
+                <div className="committee-list-container">
+                    <div className="committee-list-header">
+                        <h2>PRESENT COMMITTEE: 2023-27</h2>
+                        <div className="committee-list-divider"></div>
+                    </div>
+
+                    {/* Officers Grid - 4 Columns */}
+                    <div className="committee-grid-4">
+                        {[
+                            { id: 1, name: "Srinivasa Sharma", designation: "President", photo: "/Srinivas Sharma - President.png" },
+                            { id: 2, name: "Sunyana Gadgoli", designation: "Vice President", photo: "/Sunyana Gadgoli - vice president.png" },
+                            { id: 3, name: "Srinivasa Chinnareddy", designation: "Secretary", photo: "/Srinivasa chinnareddy - secretary.png" },
+                            { id: 4, name: "Bhavya Vinay", designation: "Treasurer", photo: "/Bhavya vinay - Treasurer.png" },
+                        ].map((member) => (
+                            <div className="committee-card" key={member.id}>
+                                <div className="committee-card-img-wrapper">
+                                    <img src={member.photo} alt={member.name} className="committee-card-img" />
+                                </div>
+                                <div className="committee-card-content">
+                                    <h3 className="committee-member-name">{member.name}</h3>
+                                    <h4 className="committee-member-designation">{member.designation}</h4>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Executive Members Grid - 5 Columns */}
+                    <div className="committee-section-header">
+                        <h3>EXECUTIVE COMMITTEE MEMBERS</h3>
+                    </div>
+                    <div className="committee-grid-5">
+                        {[
+                            { id: 5, name: "Arunkumar V", designation: "executive committe members", photo: "/Arunkumar v.png" },
+                            { id: 6, name: "Avinash Adhyapak", designation: "executive committe members", photo: "/avinash adhyapak.png" },
+                            { id: 7, name: "Dileep Ramadas", designation: "executive committe members", photo: "/dileep ramadas.png" },
+                            { id: 8, name: "Ganesh Paradi", designation: "executive committe members", photo: "/Ganesh paradi.png" },
+                            { id: 9, name: "Gautham H N", designation: "executive committe members", photo: "/Gautham H N.png" },
+                            { id: 10, name: "Hemanth Kumar", designation: "executive committe members", photo: "/Hemanth kumar.png" },
+                            { id: 11, name: "Manjula Krishanan", designation: "executive committe members", photo: "/Manjula Krishanan.png" },
+                            { id: 12, name: "Mary Bhagyam", designation: "executive committe members", photo: "/Mary bhagyam.png" },
+                            { id: 13, name: "K.B.Math", designation: "executive committe members", photo: "/K.B.Math.png" },
+                            { id: 14, name: "Pramath Joshi", designation: "executive committe members", photo: "/Pramanth joshi.png" },
+                            { id: 15, name: "Sanath Billandlahalli", designation: "executive committe members", photo: "/Sanath Billandlahalli.png" },
+                            { id: 16, name: "Shwetha Gowda", designation: "executive committe members", photo: "/Shwetha Gowda.png" },
+                            { id: 17, name: "Sudeysh Kumar", designation: "executive committe members", photo: "/Sudeysh kumar.png" },
+                            { id: 18, name: "Vanishree Kulkarni", designation: "executive committe members", photo: "/Vanishree kulkarni.png" },
+                            { id: 19, name: "Vikas Sudheendra", designation: "executive committe members", photo: "/Vikas sudheendra.png" },
+                        ].map((member) => (
+                            <div className="committee-card" key={member.id}>
+                                <div className="committee-card-img-wrapper">
+                                    <img src={member.photo} alt={member.name} className="committee-card-img" />
+                                </div>
+                                <div className="committee-card-content">
+                                    <h3 className="committee-member-name">{member.name}</h3>
+                                    <h4 className="committee-member-designation">{member.designation}</h4>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Bottom Row - Core Committee and VSL Coordinator centered */}
+                    <div className="committee-bottom-container">
+                        <div className="committee-bottom-row">
+                            {/* Core Committee Section */}
+                            <div className="committee-group-section">
+                                <div className="committee-section-header">
+                                    <h3>CORE COMMITTEE MEMBERS</h3>
+                                </div>
+                                <div className="committee-group-cards">
+                                    {[
+                                        { id: 20, name: "Hemanth", designation: "Core Committe Members", photo: "/Hemanth.png" },
+                                        { id: 21, name: "Krishnapriya", designation: "Core Committe Members", photo: "/Unknown.png" },
+                                    ].map((member) => (
+                                        <div className="committee-card" key={member.id}>
+                                            <div className="committee-card-img-wrapper">
+                                                <img src={member.photo} alt={member.name} className="committee-card-img" />
+                                            </div>
+                                            <div className="committee-card-content">
+                                                <h3 className="committee-member-name">{member.name}</h3>
+                                                <h4 className="committee-member-designation">{member.designation}</h4>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* VSL Coordinator Section */}
+                            <div className="committee-group-section">
+                                <div className="committee-section-header">
+                                    <h3>VSL-COORDINATOR</h3>
+                                </div>
+                                <div className="committee-group-cards">
+                                    {[
+                                        { id: 22, name: "Narendra", designation: "VSL-coordinator", photo: "/Narendra.png" },
+                                    ].map((member) => (
+                                        <div className="committee-card" key={member.id}>
+                                            <div className="committee-card-img-wrapper">
+                                                <img src={member.photo} alt={member.name} className="committee-card-img" />
+                                            </div>
+                                            <div className="committee-card-content">
+                                                <h3 className="committee-member-name">{member.name}</h3>
+                                                <h4 className="committee-member-designation">{member.designation}</h4>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* ================= OFFICE BEARERS SECTION ================= */}
             <section className="committee-list-section">
                 <div className="committee-list-container">
 
                     <div className="committee-list-header">
-                        <h2>OFFICE BEARERS 2025–2027</h2>
+                        <h2>PAST COMMITTEE 2023–2025</h2>
                         <div className="committee-list-divider"></div>
                     </div>
 
@@ -295,10 +409,10 @@ const Comittee = () => {
             <section className="committee-list-section" style={{ paddingTop: '0' }}>
                 <div className="committee-list-container">
 
-                    <div className="committee-list-header">
+                    {/* <div className="committee-list-header">
                         <h2>COMMITTEE MEMBERS</h2>
                         <div className="committee-list-divider"></div>
-                    </div>
+                    </div> */}
 
                     <div className="committee-grid">
                         {committeeMembers.map((member) => (
@@ -390,30 +504,7 @@ const Comittee = () => {
                 </div>
             </section>
 
-            {/* ================= PAST COMMITTEE ================= */}
-            <section className="committee-list-section" style={{ paddingTop: '0' }}>
-                <div className="committee-list-container">
-
-                    <div className="committee-list-header">
-                        <h2>Past Committee: 2023-25</h2>
-                        <div className="committee-list-divider"></div>
-                    </div>
-
-                    <div className="committee-grid">
-                        {pastCommittee.map((member) => (
-                            <div className="committee-card" key={member.id}>
-                                <div className="committee-card-img-wrapper">
-                                    <img src={member.photo} alt={member.name} className="committee-card-img" />
-                                </div>
-                                <div className="committee-card-content">
-                                    <h3 className="committee-member-name">{member.name}</h3>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                </div>
-            </section>
+           
         </>
     );
 };
